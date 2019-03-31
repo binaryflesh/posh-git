@@ -56,7 +56,7 @@ function New-GitPromptSettings {
     "`e[96m`e[40mPS > `e[0m".
 #>
 function Write-Prompt {
-    [CmdletBinding(DefaultParameterSetName="Default")]
+    [CmdletBinding(DefaultParameterSetName = "Default")]
     param(
         # Specifies objects to display in the console or render as a string if
         # $GitPromptSettings.AnsiConsole is enabled. If the Object is of type
