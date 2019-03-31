@@ -6,6 +6,7 @@ if (($PSVersionTable.PSVersion.Major -ge 6) -and !$IsWindows) {
         [Diagnostics.CodeAnalysis.SuppressMessageAttribute("PSUseShouldProcessForStateChangingFunctions", "")]
         param()
     }
+
     return
 }
 
