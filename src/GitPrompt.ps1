@@ -62,19 +62,19 @@ function Write-Prompt {
         # $GitPromptSettings.AnsiConsole is enabled. If the Object is of type
         # [PoshGitTextSpan] the other color parameters are ignored since a
         # [PoshGitTextSpan] provides the colors.
-        [Parameter(Mandatory, Position=0)]
+        [Parameter(Mandatory, Position = 0)]
         $Object,
 
         # Specifies the foreground color.
-        [Parameter(ParameterSetName="Default")]
+        [Parameter(ParameterSetName = "Default")]
         $ForegroundColor = $null,
 
         # Specifies the background color.
-        [Parameter(ParameterSetName="Default")]
+        [Parameter(ParameterSetName = "Default")]
         $BackgroundColor = $null,
 
         # Specifies both the background and foreground colors via [PoshGitCellColor] object.
-        [Parameter(ParameterSetName="CellColor")]
+        [Parameter(ParameterSetName = "CellColor")]
         [ValidateNotNull()]
         [PoshGitCellColor]
         $Color,
@@ -252,7 +252,7 @@ function Format-GitBranchName {
     param(
         # The branch name to format according to the GitPromptSettings:
         # BranchNameLimit and TruncatedBranchSuffix.
-        [Parameter(Position=0)]
+        [Parameter(Position = 0)]
         [string]
         $BranchName
     )
