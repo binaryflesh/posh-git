@@ -208,7 +208,7 @@ function Get-GitStatus {
     param(
         # The path of a directory within a Git repository that you want to get
         # the Git status.
-        [Parameter(Position=0)]
+        [Parameter(Position = 0)]
         $GitDir = (Get-GitDirectory),
 
         # If specified, overrides $GitPromptSettings.EnablePromptStatus when it
@@ -482,16 +482,16 @@ function Get-AliasPattern($exe) {
     Shows the branches, both merged and unmerged, that match the specified wildcard that would be deleted without actually deleting them. Once you've verified the list of branches looks correct, remove the WhatIf parameter to actually delete the branches.
 #>
 function Remove-GitBranch {
-    [CmdletBinding(DefaultParameterSetName="Wildcard", SupportsShouldProcess, ConfirmImpact="Medium")]
+    [CmdletBinding(DefaultParameterSetName = "Wildcard", SupportsShouldProcess, ConfirmImpact = "Medium")]
     param(
         # Specifies a regular expression pattern for the branches that will be deleted. Certain branches are always excluded from deletion e.g. the current branch as well as the develop and master branches. See the ExcludePattern parameter to modify that pattern.
-        [Parameter(Position=0, Mandatory, ParameterSetName="Wildcard")]
+        [Parameter(Position = 0, Mandatory, ParameterSetName = "Wildcard")]
         [ValidateNotNullOrEmpty()]
         [string]
         $Name,
 
         # Specifies a regular expression for the branches that will be deleted. Certain branches are always excluded from deletion e.g. the current branch as well as the develop and master branches. See the ExcludePattern parameter to modify that pattern.
-        [Parameter(Position=0, Mandatory, ParameterSetName="Pattern")]
+        [Parameter(Position = 0, Mandatory, ParameterSetName = "Pattern")]
         [ValidateNotNull()]
         [string]
         $Pattern,
